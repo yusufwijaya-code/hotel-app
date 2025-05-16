@@ -22,6 +22,51 @@ export class ReservationFormComponent implements OnInit {
 
   }
 
+  // START FROM SERVICE
+  // ngOnInit(): void {
+  //   this.reservationForm = this.formBuilder.group({
+  //     checkInDate: ['', Validators.required],
+  //     checkOutDate: ['', Validators.required],
+  //     guestName: ['', Validators.required],
+  //     guestEmail: ['', [Validators.required, Validators.email]],
+  //     roomNumber: ['', Validators.required],
+  //   })
+
+  //   let id = this.activatedRoute.snapshot.paramMap.get('id')
+
+  //   if (id) {
+  //     this.reservationService.getReservation(id).subscribe(reservation => {
+  //       if (reservation) {
+  //         this.reservationForm.patchValue(reservation)
+  //       }
+  //     })
+  //   }
+  // }
+
+  // onSubmit() {
+  //   if (this.reservationForm.valid) {
+
+  //     let reservation: Reservation = this.reservationForm.value
+
+  //     let id = this.activatedRoute.snapshot.paramMap.get('id')
+
+  //     if (id) {
+  //       // Update
+  //       this.reservationService.updateReservation(id, reservation).subscribe(() => {
+  //         console.log("Update request processed");
+  //       })
+  //     } else {
+  //       // Create
+  //       this.reservationService.addReservation(reservation).subscribe(() => {
+  //         console.log("Create request processed");
+  //       })
+  //     }
+
+  //     this.router.navigate(['/list'])
+  //   }
+  // }
+  // END FROM SERVICE
+
   ngOnInit(): void {
     this.reservationForm = this.formBuilder.group({
       checkInDate: ['', Validators.required],
